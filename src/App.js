@@ -3,6 +3,8 @@ import HOCRed from './HOCComponents/Hoc'
 import { HOCGreen,HOCAqua } from './HOCComponents/Hoc';
 import Counter from './HOCComponents/Counter';
 import {Counter1} from './HOCComponents/Counter';
+import SimCom from './PUREComponents/SimpleComp'
+import PureCom from './PUREComponents/PureComp'
 
 function App() {
   return (
@@ -22,7 +24,10 @@ function App() {
        <h1>HOC Counters</h1>
        <HOCRed cmp={Counter} />
        <HOCGreen cmp={Counter} />
-       <HOCAqua cmp1={Counter1} />
+       <HOCAqua cmp1={Counter1} /> 
+
+       <SimCom />
+       <PureCom />
     </>
   )
 }
