@@ -6,6 +6,7 @@ import {Counter1} from './HOCComponents/Counter';
 import SimCom from './PUREComponents/SimpleComp'
 import PureCom from './PUREComponents/PureComp'
 
+
 function App() {
   return (
     <>
@@ -19,15 +20,23 @@ function App() {
 
     <h3>syntax</h3>
     const EnhancedComponent = higherOrderComponent(WrappedComponent);
-
     </p>
+
        <h1>HOC Counters</h1>
        <HOCRed cmp={Counter} />
        <HOCGreen cmp={Counter} />
-       <HOCAqua cmp1={Counter1} /> 
+       <HOCAqua cmp1={Counter1} />
 
-       <SimCom />
+
+       <h1>Pure Components</h1>
+       <h3>Defination</h3>
+       A component is said to be pure when given the same props, it always renders the same.
+       A non-pure component can, given the same props, render differently. <br/><br/>
+       There is nothing wrong with a component not being pure. It just means that it needs to re-render no matter whether its props have changed or not.<br/>
+Inversely, a pure component does not need to re-render if its props have not changed. This way, it can be optimized by skipping re-rendering.
        <PureCom />
+       <SimCom />
+       
     </>
   )
 }

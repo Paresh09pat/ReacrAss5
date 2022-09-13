@@ -9,13 +9,14 @@ class PureCom extends PureComponent{
 
    }
    
-   
     render(){
         console.warn(this.state);
         return(
             <>
+              <div className="purediv"></div>
             <h1> Pure Component : {this.state.data}</h1>
             <button onClick={()=>{this.setState({data:10})}}> Update Button </button>
+            <div/>
             </>
         )
     }
